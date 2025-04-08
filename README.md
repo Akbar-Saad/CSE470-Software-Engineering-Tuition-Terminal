@@ -1,0 +1,1 @@
+This is an Online Tuition Terminal developed using JavaScript, Node.js, and follows the MVC (Model-View-Controller) architectural pattern. The platform allows students to connect with tutors based on subjects, availability, and location—similar to ride-sharing apps. The system includes user authentication, profile management, tutor-student matching, and a booking system. 
