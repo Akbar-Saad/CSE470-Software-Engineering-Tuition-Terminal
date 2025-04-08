@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/payment.css">
+    <script src="./js/payment.js" defer></script>
+    <title>Payment Section</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Tuition Payment</h1>
+    </div>
+
+    <div class="payment-section">
+        <h2>Make a Payment</h2>
+        <form id="paymentForm">
+            <!-- Payment Type -->
+            <div class="form-group">
+                <label for="payment-type">Payment Type</label>
+                <select id="payment-type" name="paymentType" required>
+                    <option value="entire-course">Full Course</option>
+                    <option value="session-wise">Session </option>
+                    
+                </select>
+            </div>
+
+            <!-- Session Packages (Visible for Session-Wise Payment) -->
+            <div class="form-group hidden" id="session-packages">
+                <label for="package">Choose a Package</label>
+                <select id="package" name="package">
+                    <option value="A">Package A - 2 hours (1000 Tk)</option>
+                    <option value="B">Package B - 4 hours (1500 Tk)</option>
+                    <option value="C">Package C - 5 hours (2000 Tk)</option>
+                </select>
+            </div>
+
+            <!-- Entire Course Cost (Visible for Entire Course Payment) -->
+            <div class="form-group hidden" id="course-info">
+                <p>The entire course fee is <strong>8000 Tk</strong>.</p>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="form-group">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="paymentMethod" required>
+                    <option value="bkash">Bkash</option>
+                    <option value="bank-account">Bank Account</option>
+                    <option value="card">Card</option>
+                </select>
+            </div>
+
+            <!-- Redirect based on Payment Method -->
+            <div class="form-group">
+                <button type="button" id="proceed">Proceed</button>
+            </div>
+        </form>
+        <div class="info">
+            <p>Your payment is secure and encrypted.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bank-payment.css">
+    <script src="./js/bank-payment.js" defer></script>
+    <title>Bank Payment</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Bank Payment</h1>
+    </div>
+    <h2>You have to pay: <span id="price"></span></h2>
+    <div class="payment-section">
+        <h2>Complete Your Payment</h2>
+        <form id="bankPaymentForm">
+            <!-- Bank Account Number -->
+            <div class="form-group">
+                <label for="bank-account">Bank Account Number</label>
+                <input type="text" id="bank-account" name="bankAccount" placeholder="Enter 17-digit account number"
+                    maxlength="17" required>
+                <div class="error-message" id="account-error">Account number must be exactly 17 digits.</div>
+            </div>
+
+            <!-- Transaction ID -->
+            <div class="form-group">
+                <label for="transaction-id">Transaction ID</label>
+                <input type="text" id="transaction-id" name="transactionId" placeholder="Enter your Transaction ID" required>
+                <div class="error-message" id="transaction-error">Transaction ID is required.</div>
+            </div>
+
+             <!-- Alternate Payment Options -->
+             <div class="alternate-payment">
+                <p>You can also pay with:</p>
+                <a href="bkash-payment.html" class="button">Bkash</a>
+                <a href="card-payment.html" class="button">Card</a>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="button" id="pay-now">Pay Now</button>
+            </div>
+        </form>
+        <div class="success-message" id="success-message">Payment Successful!</div>
+    </div>
+</body>
+</html>
